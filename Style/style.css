@@ -11,7 +11,19 @@
     margin-top: 60px;
 }
 
-.searchBTN{
+#searchBTN{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+  
+}
+
+#gif_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gif_container > img{
+    width: 320px;
 }

@@ -11,7 +11,7 @@
     <header class="container-fluid">
         <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">GIF Engine</a>
+              <a class="navbar-brand" href="./index.html">GIF Engine</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -25,7 +25,10 @@
                     <button class="nav-link nav_btn" onclick="renderCats()">Cats</button>
                   </li>
                   <li class="nav-item">
-                    <button class="nav-link nav_btn" onclick="">Dogs</button>
+                    <button class="nav-link nav_btn" onclick="renderDogs()">Dogs</button>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://giphy.com/">GIPHY</a>
                   </li>
 
                 </ul>
@@ -40,7 +43,7 @@
 
     <div class="container-fluid main_container">
         <input class="form-control" id="txt_city" type="text">
-        <button id="searchBTN" onclick="getSyncData()">Get Data</button>
+        <button id="searchBTN" onclick="getSyncData()">Search</button>
         
     </div>
     <div id="gif_container">

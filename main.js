@@ -1,3 +1,4 @@
+
 async function renderSearch(){
     let apiKey = 'dMC2OFEnh9THjWRT1OjjpLm0klaKAlCW';
     let myInput = document.getElementById("searchInput").value;
@@ -22,12 +23,13 @@ async function getSyncData(){
     let myInput = document.getElementById("txt_city").value;
     let info = null;
     console.log("Requesting Data");
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=5`); //make api key a var
+    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=12`); //make api key a var
    
     console.log("Completed...");
     document.createElement('img');
     info = await response.json();
     let gif_container = document.getElementById('gif_container');
+    gif_container.innerHTML = '';
     
     for(let i = 0; i < info.data.length; i++){
         //let img = `<img src="${info.data[i].embed_url}">`
@@ -49,6 +51,26 @@ async function renderCats(){
     document.createElement('img');
     info = await response.json();
     let gif_container = document.getElementById('gif_container');
+    gif_container.innerHTML = '';
+    
+    for(let i = 0; i < info.data.length; i++){
+        let img = `<img src="${info.data[i].images.original.url}">`
+        gif_container.innerHTML += img;
+        console.log(info.data[i].images.original.url);
+    }
+}       
+
+
+async function renderDogs(){
+    let apiKey = 'dMC2OFEnh9THjWRT1OjjpLm0klaKAlCW';
+    let info = null;
+    console.log("Requesting Data");
+    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=dogs&limit=36`); //make api key a var
+   
+    document.createElement('img');
+    info = await response.json();
+    let gif_container = document.getElementById('gif_container');
+    gif_container.innerHTML = '';
     
     for(let i = 0; i < info.data.length; i++){
         let img = `<img src="${info.data[i].images.original.url}">`
