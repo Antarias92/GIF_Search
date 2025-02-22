@@ -3,19 +3,22 @@
     padding: 0;
 }
 
-.navbar{
-    margin-bottom: 0px;
-}
 
 .main_container{
     margin-top: 60px;
+}
+
+.searchForm{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #searchBTN{
     display: flex;
     justify-content: center;
     align-items: center;
-  
 }
 
 #gif_container{
@@ -24,6 +27,7 @@
     flex-wrap: wrap;
 }
 
-.gif_container > img{
-    width: 320px;
+#gif_container > img{
+    min-width: 320px;
+    margin: 5px;
 }

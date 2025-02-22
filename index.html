@@ -18,7 +18,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     
@@ -32,22 +32,21 @@
                   </li>
 
                 </ul>
-                <form class="d-flex">
+                <!--<form class="d-flex">
                   <input class="form-control me-2" id="searchInput" type="text">
                   <button class="btn btn-outline-success" onclick="renderSearch()">Search</button>
-                </form>
+                </form>-->
               </div>
             </div>
           </nav>
     </header>
 
-    <div class="container-fluid main_container">
-        <input class="form-control" id="txt_city" type="text">
-        <button id="searchBTN" onclick="getSyncData()">Search</button>
-        
+    <div class="container-fluid main_container form-row">
+        <input class="form-control searchForm" id="txt_city" type="text">
+        <button onclick="getSyncData()">Search</button>
     </div>
     <div id="gif_container">
-        <h3>test</h3>
+       
     </div>
 
     <script src="./main.js"></script>

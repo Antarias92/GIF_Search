@@ -4,7 +4,7 @@ async function renderSearch(){
     let myInput = document.getElementById("searchInput").value;
     let info = null;
 
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=12`);
+    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=36`);
 
     console.log("Completed...");
     document.createElement('img');
@@ -23,7 +23,7 @@ async function getSyncData(){
     let myInput = document.getElementById("txt_city").value;
     let info = null;
     console.log("Requesting Data");
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=12`); //make api key a var
+    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=36`); //make api key a var
    
     console.log("Completed...");
     document.createElement('img');
@@ -46,7 +46,7 @@ async function renderCats(){
     let apiKey = 'dMC2OFEnh9THjWRT1OjjpLm0klaKAlCW';
     let info = null;
     console.log("Requesting Data");
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=cats&limit=12`); //make api key a var
+    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=cats&limit=36`); //make api key a var
    
     document.createElement('img');
     info = await response.json();
