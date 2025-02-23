@@ -10,9 +10,7 @@ body{
 
 .main_container{
     margin-top: 60px;
-    margin-bottom: 300px;
-    padding-bottom: 200px;
-    position: fixed;
+    margin-bottom: 20px;
 }
 
 .searchForm{
@@ -42,3 +40,21 @@ body{
     min-width: 320px;
     margin: 5px;
 }  
+
+.main-banner {
+    height: 600px;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25)
+      ),
+      url(../Images/MarineWalk.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 64px;
+  }
