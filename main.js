@@ -23,7 +23,7 @@ let info = null;
 
 async function renderSearch(){
     let apiKey = 'dMC2OFEnh9THjWRT1OjjpLm0klaKAlCW';
-    let myInput = document.getElementById("txt_city").value;
+    let myInput = document.getElementById("searchInput").value;
     let info = null;
     console.log("Requesting Data");
     let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=36`);
