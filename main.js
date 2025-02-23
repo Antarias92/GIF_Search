@@ -22,22 +22,25 @@ let info = null;
 */
 
 async function renderSearch(){
-   
-    let myInput = document.getElementById("searchInput").value;
-
-    console.log("Requesting Data");
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=48`);
-   
-    document.createElement('img');
-    info = await response.json();
-    let gif_container = document.getElementById('gif_container');
-    gif_container.innerHTML = '';
-    
-    for(let i = 0; i < info.data.length; i++){
-        let img = `<img src="${info.data[i].images.original.url}">`
-        gif_container.innerHTML += img;
-        console.log(info.data[i].images.original.url);
+    try{
+        let myInput = document.getElementById("searchInput").value;
+        let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${myInput}&limit=48`);
+       
+        document.createElement('img');
+        info = await response.json();
+        let gif_container = document.getElementById('gif_container');
+        gif_container.innerHTML = '';
+        
+        for(let i = 0; i < info.data.length; i++){
+            let img = `<img src="${info.data[i].images.original.url}">`
+            gif_container.innerHTML += img;
+            console.log(info.data[i].images.original.url);
+        }
     }
+    catch(error){
+        console.log(error);
+    }
+
 }       
 
 
